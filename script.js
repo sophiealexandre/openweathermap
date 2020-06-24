@@ -7,7 +7,7 @@ function getValue() {
     var city = document.getElementById("in").value;
     console.log(city);
 
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID=c5b94588fc705c9a7db7414f6c086aeb')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID=c5b94588fc705c9a7db7414f6c086aeb')
           .then(response => response.json())
           .then(data => {
                 console.log("My weather is", data.weather[0].description)
