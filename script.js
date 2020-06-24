@@ -30,7 +30,7 @@ function getValue() {
                 txt = "The weather is " + weather
                 txt1 = "The current temperature is " + tempInCelsius.toFixed(1) + " °C."
                 txt2 = "The minimum temperature is " +  minTempInCelsius.toFixed(1) + " °C."
-                txt3 = "The maximumm temperature is " + maxTempInCelsius.toFixed(1) + " °C."
+                txt3 = "The maximum temperature is " + maxTempInCelsius.toFixed(1) + " °C."
                 document.getElementById("weather").innerHTML = txt;
                 document.getElementById("weather1").innerHTML = txt1;
                 document.getElementById("weather2").innerHTML = txt2;
