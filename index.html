@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="http://sophiealexandre.eu/favicon"/>
+    <title>MintBean Project</title>
+  </head>
+  <body class="text-center">
+    <header>
+      <h1>[ You cannot control the weather ]</h1>
+      <h2>But the weather cannot control your sense of style!</h2>
+    </header>
+    <!-- 1. Mobile full-screen, laptop Half-Half -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <div class="row">
+              <input type="text" placeholder="Name" id="in" class="field">
+              <button class="btn btn-flat"onclick="getValue()">Search</button>
+            </div>
+
+            <h2 id="weather"></h2>
+            <h2 id="weather1"></h2>
+            <h2 id="weather2"></h2>
+            <h2 id="weather3"></h2>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1514632595-4944383f2737?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+
+            <p>Something</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="myDIV">
+      <h2>Now let's pick a few pieces that will make a statement</h2>
+      <p>I don't have time for this, pick an outfit for me!</p>
+      <button class="btn btn-flat"onclick="myFunction()">Click me</button>
+      <h2 id="demo"></h2>
+      <div class="row" >
+        <div class="col-12 col-lg-6">
+          <div class="card">
+            <div id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="./img/hotsweater.jpeg" draggable="true" ondragstart="drag(event)" id="cold" width="88" height="88">
+              <img src="./img/hottshirt.jpeg" draggable="true" ondragstart="drag(event)" id="sun" width="88" height="88">
+              <img src="./img/raincoat.jpg" draggable="true" ondragstart="drag(event)" id="rain" width="88" height="88">
+              <img src="./img/sunhat.jpg" draggable="true" ondragstart="drag(event)" id="sun" width="88" height="88">
+              <img src="./img/trenchcoat.webp" draggable="true" ondragstart="drag(event)" id="rain" width="88" height="88">
+              <img src="./img/warmcoat.jpg" draggable="true" ondragstart="drag(event)" id="cold" width="88" height="88">
+              <img src="./img/winterboots.jpg" draggable="true" ondragstart="drag(event)" id="cold" width="88" height="88">
+              <img src="./img/woolenhat.jpg" draggable="true" ondragstart="drag(event)" id="cold" width="88" height="88">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div id="div2" class="card" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Show after clicking -->
+    <div class="container" id="myDIV2" style="display:none;">
+      <h2>I would recommend you wear the below items!</h2>
+      <p>Don't thank me :)</p>
+      <button class="btn btn-flat" onClick="window.location.reload();">Refresh Page</button>
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="card">
+            <div id="div1" class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="./img/hotsweater.jpeg" draggable="true" ondragstart="drag(event)" id="cold1" width="88" height="88">
+              <img src="./img/hottshirt.jpeg" draggable="true" ondragstart="drag(event)" id="sun" width="88" height="88">
+              <img src="./img/raincoat.jpg" draggable="true" ondragstart="drag(event)" id="rain1" width="88" height="88">
+              <img src="./img/sunhat.jpg" draggable="true" ondragstart="drag(event)" id="sun" width="88" height="88">
+              <img src="./img/trenchcoat.webp" draggable="true" ondragstart="drag(event)" id="rain1" width="88" height="88">
+              <img src="./img/warmcoat.jpg" draggable="true" ondragstart="drag(event)" id="cold1" width="88" height="88">
+              <img src="./img/winterboots.jpg" draggable="true" ondragstart="drag(event)" id="cold1" width="88" height="88">
+              <img src="./img/woolenhat.jpg" draggable="true" ondragstart="drag(event)" id="cold1" width="88" height="88">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="header" style="visibility:show">
+      Made by Sophie. Icons
+    </div>
+    <!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
+  </body>
+  <script  src="./script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</html>
