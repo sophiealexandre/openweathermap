@@ -23,17 +23,25 @@ function getValue() {
                 var minTempInCelsius = minTemp - kelvin
                 var maxTempInCelsius = maxTemp - kelvin
 
-                var sunrise = data.sys.sunrise
-                var sunriseInDate =  Date(sunrise*1000)
-                const sunriseInDateFull = new Date(sunriseInDate);
-                sunrisehour = sunriseInDateFull.getHours() + ":" + sunriseInDateFull.getMinutes()
 
-                var sunset = data.sys.sunset
-                var sunsetInDate =  Date(sunset*1000)
-                const sunsetInDateFull = new Date(sunsetInDate);
-                sunsethour = sunsetInDateFull.getHours() + ":" + sunsetInDateFull.getMinutes()
-                txtsunset = "Sunset: " + sunsethour
-                txtsurise = "Sunrise: "  + sunrisehour
+
+                 function convertTime(unixTime){
+                    let dt = new Date(unixTime * 1000)
+                    let h = dt.getHours()
+                    let m = "0" + dt.getMinutes()
+                    let t = h + ":" + m.substr(-2)
+                    return t
+                }
+                  let sunrise = convertTime(data.sys.sunrise)
+                  let sunset = convertTime(data.sys.sunset)
+
+
+
+
+
+
+                txtsunset = "Sunset: " + sunrise
+                txtsurise = "Sunrise: "  + sunset
 
 
 
