@@ -15,7 +15,7 @@ body { margin: 0; padding: 0;
 h1 {
   font-family: 'Montserrat', sans-serif;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 55px;
+  font-size: 45px;
   font-weight: bold;
   text-transform: uppercase;
   padding: 20px;
@@ -126,6 +126,17 @@ header{
         min-height: 300px;
 
       }
+.clothecard {
+  padding: 20px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  height: 10vh;
+  min-height: 300px;
+
+}
 
 
 

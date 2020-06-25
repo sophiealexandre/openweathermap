@@ -75,8 +75,9 @@
       <h2 id="demo"></h2>
       <div class="row" >
         <div class="col-12 col-lg-6">
-          <div class="card">
+          <div class="clothecard">
             <div id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)">
+              <h2>Your Beautiful wardrobe</h2>
               <img src="http://sophiealexandre.eu/img/hotsweater.jpeg" draggable="true" ondragstart="drag(event)" id="cold" width="88" height="88">
               <img src="http://sophiealexandre.eu/img/hottshirt.jpeg" draggable="true" ondragstart="drag(event)" id="sun" width="88" height="88">
               <img src="http://sophiealexandre.eu/img/raincoat.jpg" draggable="true" ondragstart="drag(event)" id="rain" width="88" height="88">
@@ -89,7 +90,9 @@
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div id="div2" class="card bg-light" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="div2" class="clothecard" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>What you're going to wear today</h2>
+          </div>
         </div>
       </div>
     </div>
@@ -97,13 +100,14 @@
     <!-- Show after clicking -->
 
     <div class="container" id="myDIV2" style="display:none;">
-       <h2>I would recommend you wear the below items!</h2>
-       <p>Don't thank me :)</p>
-       <button class="btn btn-flat" onClick="window.location.reload();">Refresh Page</button>
        <div class="row justify-content-center">
           <div class="col-lg-12">
-             <div class="card">
-                <div id="div1" class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <h2>Wear this, honey</h2>
+              <p>You're welcome!</p>
+              <button class="btn btn-flat" onClick="window.location.reload();">Refresh Page</button>
+             <div class="clothecard">
+
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                    <img src="http://sophiealexandre.eu/img/hotsweater.jpeg" draggable="true" ondragstart="drag(event)" id="cold1" width="88" height="88">
                    <img src="http://sophiealexandre.eu/img/hottshirt.jpeg" draggable="true" ondragstart="drag(event)" id="sun" width="88" height="88">
                    <img src="http://sophiealexandre.eu/img/raincoat.jpg" draggable="true" ondragstart="drag(event)" id="rain1" width="88" height="88">
