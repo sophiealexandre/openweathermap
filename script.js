@@ -1,40 +1,71 @@
-
-
-
 // Fetch city
+//
+
 function getValue() {
     // Select input
     var city = document.getElementById("in").value;
-    console.log(city);
 
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID=c5b94588fc705c9a7db7414f6c086aeb')
           .then(response => response.json())
           .then(data => {
-                console.log("My weather is", data.weather[0].description)
-                console.log("My temp is", data.main.temp)
-                console.log("My temp is", data.main.temp_min)
-                console.log("My temp is", data.main.temp_max)
 
-
-
+                var city = data.name
+                var country = data.sys.country
                 var weather = data.weather[0].description
                 var currentTemp = data.main.temp
                 var minTemp = data.main.temp_min
                 var maxTemp = data.main.temp_max
                 var kelvin = 273
-
+                var icon = data.weather[0].icon
+                var adressImg = ('http://openweathermap.org/img/wn/'+icon+'@2x.png')
+                var styleImg = ('width: 120px; height: 120px')
                 var tempInCelsius = currentTemp - kelvin
                 var minTempInCelsius = minTemp - kelvin
                 var maxTempInCelsius = maxTemp - kelvin
 
-                txt = "The weather is " + weather
-                txt1 = "The current temperature is " + tempInCelsius.toFixed(1) + " °C."
-                txt2 = "The minimum temperature is " +  minTempInCelsius.toFixed(1) + " °C."
-                txt3 = "The maximum temperature is " + maxTempInCelsius.toFixed(1) + " °C."
-                document.getElementById("weather").innerHTML = txt;
-                document.getElementById("weather1").innerHTML = txt1;
-                document.getElementById("weather2").innerHTML = txt2;
-                document.getElementById("weather3").innerHTML = txt3;
+                var sunrise = data.sys.sunrise
+                var sunriseInDate =  Date(sunrise*1000)
+                const sunriseInDateFull = new Date(sunriseInDate);
+                sunrisehour = sunriseInDateFull.getHours() + ":" + sunriseInDateFull.getMinutes()
+
+                var sunset = data.sys.sunset
+                var sunsetInDate =  Date(sunset*1000)
+                const sunsetInDateFull = new Date(sunsetInDate);
+                sunsethour = sunsetInDateFull.getHours() + ":" + sunsetInDateFull.getMinutes()
+                txtsunset = "Sunset: " + sunsethour
+                txtsurise = "Sunrise: "  + sunrisehour
+
+
+
+                txt = "The weather is: " + weather
+                txt1 = "Current temperature: " + tempInCelsius.toFixed(1) + " °C."
+                txt2 = "Minimum temperature: " +  minTempInCelsius.toFixed(1) + " °C."
+                txt3 = "Maximum temperature: " + maxTempInCelsius.toFixed(1) + " °C."
+                txtwhere = city + ", " +country
+                document.getElementById("sunset").innerHTML = txtsunset
+                document.getElementById("sunrise").innerHTML = txtsurise
+
+                document.getElementById("city").innerHTML = txtwhere
+                document.getElementById("weather").innerHTML = txt
+                document.getElementById("weather1").innerHTML = txt1
+                document.getElementById("weather2").innerHTML = txt2
+                document.getElementById("weather3").innerHTML = txt3
+                document.getElementById("weather4").src = adressImg
+                document.getElementById("weather4").style = styleImg
+
+
+                var show = document.getElementById("forecast");
+                if (show.style.display === "none") {
+                  show.style.display = "block";
+                } else {
+                  show.style.display = "none";
+                }
+                var show2 = document.getElementById("question");
+                if (show2.style.display === "none") {
+                  show2.style.display = "block";
+                } else {
+                  show2.style.display = "none";
+                }
            });
 }
 

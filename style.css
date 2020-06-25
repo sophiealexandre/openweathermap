@@ -25,9 +25,7 @@ h1 {
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 
 }
@@ -35,11 +33,15 @@ h2 {
 
 h3 {
   font-family: 'Montserrat', sans-serif;
-  margin-top: 20px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-top: 10px;
   font-size: 20px;
+
+}
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 22px;
+  font-size: 22px;
   font-weight: bold;
-  text-align: left;
 
 }
 
@@ -64,6 +66,15 @@ header{
   width: 200px;
 }
 
+.img {
+  height: 88px;
+  width: 88px;
+  border: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .btn-flat {
   color: white;
@@ -79,6 +90,9 @@ header{
   color: white;
 }
 
+.container {
+  padding: 15px;
+}
 
 .field {
   font-size: 14px;
@@ -97,23 +111,44 @@ header{
         margin-bottom: 10px;
         font-size: 5rem;
         border: 0px;
+
+
       }
 
-.card-category {
-  margin: 50px;
-  font-size: 5rem;
-  border: 0px;
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.weathercard {
+        padding: 20px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: auto;
+        height: 10vh;
+        min-height: 300px;
+
+      }
+
+
+
+
+
+.search-form-control {
+  position: relative;
 }
 
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.search-form-control .form-control:focus {
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
 
