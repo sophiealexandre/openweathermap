@@ -66,7 +66,15 @@ function getValue() {
                 } else {
                   show2.style.display = "none";
                 }
+
+                var show3 = document.getElementById("myDIV");
+                if (show3.style.display === "none") {
+                  show3.style.display = "block";
+                } else {
+                  show3.style.display = "none";
+                }
            });
+
 }
 
 
