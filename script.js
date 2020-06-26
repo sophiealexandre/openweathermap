@@ -1,11 +1,12 @@
 // Fetch city
-//
 
 function getValue() {
-    // Select input
+
+
+     // val is "Hello";
     var city = document.getElementById("in").value;
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID=c5b94588fc705c9a7db7414f6c086aeb')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID='+apiKey)
           .then(response => response.json())
           .then(data => {
 
