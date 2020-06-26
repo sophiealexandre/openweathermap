@@ -36,12 +36,8 @@ function getValue() {
                   let sunset = convertTime(data.sys.sunset)
 
 
-
-
-
-
-                txtsunset = "Sunset: " + sunrise
-                txtsurise = "Sunrise: "  + sunset
+                txtsunset = "Sunset: " + sunset
+                txtsurise = "Sunrise: "  +  sunrise
 
 
 
